@@ -1,0 +1,294 @@
+/* 1rem = 10px */
+
+/* custom propertys or variables */
+
+:root {
+    --white: #fff;
+    --black: #212121;
+    --primary: #ffc107;
+    --secundary: #0097a7;
+    --gray: #757575;
+
+    --h1: 3.8rem;
+    --h2: 2.2rem;
+    --h3: 1.8rem;
+    --p: 1.6rem;
+
+}
+
+/* FIN custom propertys or variables */
+
+/* Global styles */
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    font-size: 16px; /*  1rem = 10px */
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: aliceblue; */
+}
+
+
+.buttom{
+    text-decoration: none;
+    color: var(--white);
+    padding: 1.5rem 2.8rem;
+    background-color: var(--secundary);
+    border-radius: 1rem;
+    width: 40%;
+    text-align: center;
+    border: none;
+}
+
+@media (min-width: 768px) {
+   .buttom{
+       width: auto;
+   }
+ }
+
+/* Tittles */
+h1{
+    font-size: var(--h1);
+    color: var(--white);
+    margin-bottom: .4rem;
+}
+
+h2.h2{
+    text-align: center;
+    font-size: var(--h2);
+    margin-bottom: 3rem;
+} 
+
+h3{
+    font-size: var(--h3);
+}
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+h2{
+    margin-bottom: 4rem;
+}
+
+.contenedor{
+    max-width: 100rem;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* Utilidades */
+.w-100{
+    width: 100%;
+}
+
+/* navegación principal */
+
+.nav-bg{
+    background-color: var(--secundary);
+}
+
+.nav-principal{
+    padding: 1.5rem 1rem;
+    flex-direction: column;
+    display: flex;
+}
+
+.nav-principal a{
+    display: block;
+    text-align: center;
+    color: var(--white);
+    margin-right: 3rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin: .8rem;
+}
+
+.nav-principal a:hover{
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* media querys
+
+@media (min-width: 480px) {
+   celular
+ }
+
+ @media (min-width: 768px) {
+    tablet
+  }
+
+@media (min-width: 1140px) {
+   computer
+ }
+
+ @media (min-width: 1400) {
+    tele
+  }
+
+*/
+
+/* Media quierias */
+
+ @media (min-width: 768px) {
+    .nav-principal{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav-bg{
+        background-color: var(--primary);
+    }
+   }
+
+   /* Hero */
+
+   .hero{
+       background-image: url(/assets/img/hero.jpg);
+       background-repeat: no-repeat;
+       background-size: cover;
+       height: 45rem;
+       position: relative;
+       margin-bottom: 3rem;
+   }
+
+   .contenido-hero{
+       position: absolute;
+       background-color: rgb(0 0 0 / 80%);
+       width: 100%;
+       height: 100%;
+
+       /* alinear cualquier elemento */
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+   }
+
+   .contenido-hero h2,
+   .contenido-hero p {
+       color: var(--white);
+   }
+
+/* servicios */
+
+/* scroll-snap */
+.servicios, 
+.nav-principal,
+.form{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+@media (min-width: 768px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 4.4rem;
+    }
+ }
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+
+
+ .servicio p{
+     line-height: 1.7;
+     text-align: center;
+ }
+
+.iconos{
+    height: 7rem;
+    width: 7rem;
+    background-color: var(--secundary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Formulario */
+
+.form{
+    background-color:var(--secundary);
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 1rem;
+}
+
+.form fieldset{
+    border: none;
+}
+
+.form legend{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 7rem;
+    margin-bottom: 4rem;
+    color: var(--primary);
+}
+
+/* contacto */
+
+
+.campo{
+    margin-bottom: 2rem;
+}
+
+.campo label{
+    color: var(--white);
+    font-weight: 700;
+    display: block;
+    margin-bottom: .3rem;
+}
+
+.text{
+    background-color: ;
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .7rem;
+}
+
+.btn2{
+    background-color: var(--primary);
+    color: var(--black);
+}
+
+.btn2:hover{
+    cursor: pointer;
+}
+
+.submit .btn2{
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos{
+        max-width: 50%;
+        margin: 0 auto;
+    }
+ }
+
+ footer{
+     text-align: center;
+ }
+
